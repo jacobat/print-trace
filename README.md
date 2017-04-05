@@ -21,8 +21,74 @@ Usage
 $ ruby trace.rb
 ```
 
+Example input
+-------------
+
+This could be the input file `trace.txt`:
+
+```
+1
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/parameters.rb" line 63 in parse_formatted_parameters
+2
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/request.rb" line 366 in block in POST
+3
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/request.rb" line 57 in fetch
+4
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/request.rb" line 57 in fetch_header
+5
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/request.rb" line 365 in POST
+6
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/parameters.rb" line 35 in parameters
+7
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/filter_parameters.rb" line 41 in filtered_parameters
+8
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/action_controller/metal/instrumentation.rb" line 21 in process_action
+9
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/action_controller/metal/params_wrapper.rb" line 248 in process_action
+10
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/activerecord-5.0.0.1/lib/active_record/railties/controller_runtime.rb" line 18 in process_action
+11
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/abstract_controller/base.rb" line 126 in process
+12
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionview-5.0.0.1/lib/action_view/rendering.rb" line 30 in process
+13
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/action_controller/metal.rb" line 190 in dispatch
+14
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/action_controller/metal.rb" line 262 in dispatch
+15
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/routing/route_set.rb" line 50 in dispatch
+16
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/routing/route_set.rb" line 32 in serve
+17
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/journey/router.rb" line 39 in block in serve
+18
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/journey/router.rb" line 26 in each
+19
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/journey/router.rb" line 26 in serve
+20
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/routing/route_set.rb" line 725 in call
+21
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/newrelic_rpm-3.15.2.317/lib/new_relic/agent/instrumentation/middleware_tracing.rb" line 96 in call
+22
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/rack-oauth2-1.3.1/lib/rack/oauth2/server/resource.rb" line 20 in call
+23
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/rack-oauth2-1.3.1/lib/rack/oauth2/server/resource/mac.rb" line 8 in call
+24
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/newrelic_rpm-3.15.2.317/lib/new_relic/agent/instrumentation/middleware_tracing.rb" line 96 in call
+25
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/rack-oauth2-1.3.1/lib/rack/oauth2/server/resource.rb" line 20 in call
+26
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/rack-oauth2-1.3.1/lib/rack/oauth2/server/resource/bearer.rb" line 8 in call
+27
+File "/data/hello_world/current/vendor/bundle/ruby/2.3.0/gems/newrelic_rpm-3.15.2.317/lib/new_relic/agent/instrumentation/middleware_tracing.rb" line 96 in call
+28
+```
+
+
 Example output
 --------------
+
+With the above input file the following output might be produced:
 
 ```
 /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/parameters.rb:63
